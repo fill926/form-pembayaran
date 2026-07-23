@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Konfirmasi Pembayaran</title>
+    <!-- Memanggil file CSS eksternal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="form-card">
+        <div class="form-header">
+            <h2>Konfirmasi Pembayaran</h2>
+            <p>Silakan isi data di bawah ini setelah melakukan transfer.</p>
+        </div>
+
+        <form id="paymentForm">
+            
+            <div class="input-group">
+                <label for="namaPembeli">Nama Pembeli</label>
+                <input type="text" id="namaPembeli" placeholder="Masukkan nama Anda" required>
+            </div>
+
+            <div class="input-group">
+                <label for="namaRekening">Nama Pemilik Rekening (Pengirim)</label>
+                <input type="text" id="namaRekening" placeholder="Contoh: Budi Santoso" required>
+            </div>
+
+            <div class="input-group">
+                <label for="buktiTransfer">Bukti Transfer</label>
+                <input type="file" id="buktiTransfer" class="file-input" accept="image/*" required>
+            </div>
+
+            <div class="input-group">
+                <label for="keterangan">Keterangan (Opsional)</label>
+                <textarea id="keterangan" rows="3" placeholder="Catatan tambahan..."></textarea>
+            </div>
+
+            <button type="submit" id="submitBtn" class="btn-submit">
+                <span id="btnText">Kirim Bukti Pembayaran</span>
+                <span id="spinner" class="spinner hidden"></span>
+            </button>
+            
+        </form>
+    </div>
+
+    <!-- Memanggil file JavaScript eksternal -->
+    <script src="script.js"></script>
+</body>
+</html>
